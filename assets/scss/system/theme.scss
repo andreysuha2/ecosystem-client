@@ -1,0 +1,37 @@
+:root {
+    //COLORS
+    //primary
+    --primary-color: #{$primaryColor};
+    --primary-dark-color: #{$primaryDarkColor};
+    --primary-dark2-color: #{$primaryDark2Color};
+    --primary-light-color: #{$primaryLightColor};
+    --primary-light2-color: #{$primaryLight2Color};
+    //secondary A
+    --secondary-a-color: #{$secondaryAColor};
+    --secondary-a-dark-color: #{$secondaryADarkColor};
+    --secondary-a-dark2-color: #{$secondaryADark2Color};
+    --secondary-a-light-color: #{$secondaryALightColor};
+    --secondary-a-light2-color: #{$secondaryALight2Color};
+    //secondary B
+    --secondary-b-color: #{$secondaryBColor};
+    --secondary-b-dark-color: #{$secondaryBDarkColor};
+    --secondary-b-dark2-color: #{$secondaryBDark2Color};
+    --secondary-b-light-color: #{$secondaryALightColor};
+    --secondary-b-light2-color: #{$secondaryALight2Color};
+    //additional
+    --addotional-color: #{$additionalColor};
+    --addotional-dark-color: #{$additionalDarkColor};
+    --addotional-dark2-color: #{$additionalDark2Color};
+    --addotional-light-color: #{$additionalLightColor};
+    --addotional-light2-color: #{$additionalLight2Color};
+    //other
+    --other-light-color: #{$otherLightColor};
+    --other-dark-color: #{$otherDarkColor};
+
+    //FONTS
+    --main-font: #{$mainFont};
+    --title-font: #{$titleFont};
+
+    //FONT SIZES
+    --base-font-size: #{$baseFontSize};
+}
