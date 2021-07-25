@@ -1,5 +1,7 @@
 import Controller from "../../core/Controller";
 import Http from "../../http/api/auth";
+import { camelizeObject } from "../../../assets/js/helpers/functions";
+
 const tokenCookieName = process.env.AUTH_TOKEN_COOKIE_NAME;
 
 class AuthController extends Controller {
@@ -25,7 +27,7 @@ class AuthController extends Controller {
     }
 
     registration(req, res) {
-        this.http.registration(req.data)
+        this.http.registration(camelizeObject(req.body, true))
             .then(({ data }) => {
                 const { token } = data;
                 res.cookie(tokenCookieName, token, { httpOnly: true });

@@ -94,8 +94,8 @@ module.exports = {
                 "@server": path.resolve(__dirname, "./server"),
                 "@http": path.resolve(__dirname, "./assets/js/http"),
                 "@serverHttp": path.resolve(__dirname, "./server/http"),
-                "@localHttp": path.resolve(__dirname, './assets/js/http/api/index.js'),
-                "@apiHttp": path.resolve(__dirname, './server/http/api/index.js')
+                "@localHttp": path.resolve(__dirname, './assets/js/http/api'),
+                "@apiHttp": path.resolve(__dirname, './server/http/api')
             };
 
             Object.assign(config.resolve.alias, aliases);

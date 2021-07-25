@@ -9,13 +9,15 @@ export default {
         },
         error(context, error) {
             if(res) {
-                const e = { status: 500, data: error };
+                const e = { status: 500, data: error, headers: null, config: null };
                 if(error.response) {
                     e.status = error.response.status;
                     e.data = error.response.data;
+                    e.headers = error.response.headers;
+                    e.config = error.config;
                 }
                 res.status(e.status);
-                return Promise.reject(e);
+                return Promise.reject({ ...e, error });
             }
             return Promise.reject(error);
         }

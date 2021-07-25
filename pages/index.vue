@@ -5,12 +5,15 @@
 </template>
 
 <script>
-import { localApi } from "@localHttp";
+import authLocalApi from "@localHttp/auth";
+import usersLocalApi from "@localHttp/users";
 
 export default {
     mounted() {
-        dl.log(localApi);
-        localApi.query.post('auth/registration', {})
+        authLocalApi.check()
+            .then(() => usersLocalApi.user.load())
+            .then((res) => dl.log(res))
+            .then(() => usersLocalApi.search.suggestion({ qs: 'a', verified: 1, resultsCount: 20 }))
             .then((res) => dl.log(res))
             .catch(e => dl.log(e));
     }
