@@ -1,4 +1,4 @@
-import Http from '@http';
+import Http from '../../assets/js/http';
 
 class ServerHttp extends Http {
     constructor(baseUrl, { headers = {}, config = {} } = {}) {

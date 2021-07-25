@@ -18,6 +18,7 @@ module.exports = {
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
+    watch: [ 'server' ],
 
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: [
@@ -90,7 +91,7 @@ module.exports = {
                 "@globalComponents": path.resolve(__dirname, "./components/Global"),
                 "@ui": path.resolve(__dirname, "./components/UI"),
                 "@helpers": path.resolve(__dirname, "./assets/js/helpers"),
-                "@api": path.resolve(__dirname, "./server"),
+                "@server": path.resolve(__dirname, "./server"),
                 "@http": path.resolve(__dirname, "./assets/js/http"),
                 "@serverHttp": path.resolve(__dirname, "./server/http"),
                 "@localHttp": path.resolve(__dirname, './assets/js/http/api/index.js'),
@@ -101,6 +102,6 @@ module.exports = {
         }
     },
     serverMiddleware: [
-        { path: '/server', handler: '~/server/index.js' }
+        { path: '/api', handler: '~/server/index.js' }
     ]
 };
