@@ -43,7 +43,8 @@ module.exports = {
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
         '@nuxtjs/stylelint-module',
-        '@nuxtjs/style-resources'
+        '@nuxtjs/style-resources',
+        '@nuxtjs/composition-api/module'
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
@@ -93,7 +94,8 @@ module.exports = {
                 "@helpers": path.resolve(__dirname, "./assets/js/helpers"),
                 "@server": path.resolve(__dirname, "./server"),
                 "@http": path.resolve(__dirname, "./assets/js/http"),
-                "@localHttp": path.resolve(__dirname, './assets/js/http/api')
+                "@localHttp": path.resolve(__dirname, './assets/js/http/api'),
+                "@composition": path.resolve(__dirname, './composition')
             };
 
             Object.assign(config.resolve.alias, aliases);

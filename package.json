@@ -17,13 +17,11 @@
     "set-aliases": "module-alias/regirster"
   },
   "dependencies": {
+    "@nuxtjs/composition-api": "^0.25.1",
     "axios": "^0.21.1",
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.5",
     "core-js": "^3.8.3",
     "dotenv": "^8.2.0",
-    "ecosystem-api-client": "file:../api-client",
-    "express": "^4.17.1",
+    "ecosystem-api-client": "git+https://github.com/andreysuha2/ecosystem-api-client.git#development",
     "normalize-scss": "^7.0.1",
     "nuxt": "^2.14.12"
   },

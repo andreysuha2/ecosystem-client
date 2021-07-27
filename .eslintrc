@@ -146,7 +146,11 @@
     "semi-spacing": ["error", { "before": false, "after": true }], // нету пробела или перевода строки после точки с запятой или есть перед ней
     "semi-style": ["error", "last"], // см. https://eslint.org/docs/rules/semi-style
     "space-before-blocks": "error", // нету пробела перед блоком
-    "space-before-function-paren": ["error", "never"], // см. https://eslint.org/docs/rules/space-before-function-paren
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always"
+    }], // см. https://eslint.org/docs/rules/space-before-function-paren
     "space-in-parens": "error", // см. https://eslint.org/docs/rules/space-in-parens
     "wrap-regex": "error", // см. https://eslint.org/docs/rules/wrap-regex
     "arrow-body-style": ["error", "as-needed"], // см. https://eslint.org/docs/rules/arrow-body-style
