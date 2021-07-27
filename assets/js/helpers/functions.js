@@ -35,10 +35,10 @@ export function decamelize(str, separator = "_") {
         .toLowerCase();
 }
 
-export function camelizeObject(obj, revert = false) {
+export function camelizeObject(obj, revert = false, separator = "_") {
     const camelizeHandler = revert ? decamelize : camelize;
     return Object.fromEntries(Object.entries(obj).map((item) => {
-        const prop = camelizeHandler(item[0]),
+        const prop = camelizeHandler(item[0], separator),
             camelizeArray = (arr) => arr.map(item => {
                 if(isObject(item)) return camelizeObject(item, revert);
                 if(Array.isArray(item)) return camelizeArray(item);

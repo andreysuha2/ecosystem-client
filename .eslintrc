@@ -97,7 +97,7 @@
     "comma-spacing": "error", // не поставлен пробел после запятой или поставлен перед
     "comma-style": "error", // см. https://eslint.org/docs/rules/comma-style
     "computed-property-spacing": "error", // см. https://eslint.org/docs/rules/computed-property-spacing
-    "consistent-this": ["error", "__this"], // для записи this в переменную используется имя переменной отличное от __this
+    "consistent-this": ["error", "that"], // для записи this в переменную используется имя переменной отличное от that
     "func-call-spacing": "error", // см. https://eslint.org/docs/rules/func-call-spacing
     "func-style": ["error", "declaration", {"allowArrowFunctions": true }], // для объявления функции используется function expression
     "indent": ["error", 4], // вложеные инструкции должны иметь отступ в 4 пробела от родителя см. https://eslint.org/docs/rules/indent
@@ -111,7 +111,7 @@
         }
       }
     ], // см. https://eslint.org/docs/rules/keyword-spacing
-    "lines-between-class-members": "error", // неиспользуется пробел между методами класса
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }], // неиспользуется пробел между методами класса
     "max-depth": "error", // превышена максимальная вложеность (4) условий см. https://eslint.org/docs/rules/max-depth
     "max-len": ["error", {
       "code": 120,
