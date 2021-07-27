@@ -1,13 +1,16 @@
-import bodyParser from 'body-parser';
-import express from 'express';
-import cookieParser from 'cookie-parser';
-import routes from './routes';
+// import bodyParser from 'body-parser';
+// import express from 'express';
+// import cookieParser from 'cookie-parser';
+// import routes from './routes';
+//
+// const app = express();
+//
+// app.use(bodyParser.json());
+// app.use(cookieParser());
+//
+// routes(app);
+//
+// export default app;
+import apiClient from 'ecosystem-api-client';
 
-const app = express();
-
-app.use(bodyParser.json());
-app.use(cookieParser());
-
-routes(app);
-
-export default app;
+export default apiClient;

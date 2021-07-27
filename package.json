@@ -22,10 +22,10 @@
     "cookie-parser": "^1.4.5",
     "core-js": "^3.8.3",
     "dotenv": "^8.2.0",
+    "ecosystem-api-client": "file:../api-client",
     "express": "^4.17.1",
     "normalize-scss": "^7.0.1",
-    "nuxt": "^2.14.12",
-    "uninstall": "0.0.0"
+    "nuxt": "^2.14.12"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
