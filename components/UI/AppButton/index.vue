@@ -13,12 +13,27 @@ export default {
     props: {
         icon: {
             type: [ String, Boolean ],
-            default: false
+            default: false,
+            validator(icon) {
+                if(typeof icon === 'boolean') return !icon;
+                return true;
+            }
+        },
+        type: {
+            type: [ String, Boolean ],
+            default: false,
+            validator(type) {
+                if(typeof type === 'boolean') return !type;
+                return [ 'primary', 'cancel', 'accept' ].includes(type);
+            }
         }
     },
     computed: {
         classList() {
-            return { "app-button__icon": this.icon };
+            return [
+                { "app-button__icon": this.icon },
+                this.type ? `app-button__${this.type}` : ''
+            ];
         }
     }
 };
@@ -26,7 +41,10 @@ export default {
 
 <style lang="scss">
 .app-button {
-    font-family: $mainFont;
+    //vars
+    --button-font-family: var(--main-font);
+    //styles
+    font-family: var(--button-font-family);
 
     &:not(:disabled) {
         cursor: pointer;

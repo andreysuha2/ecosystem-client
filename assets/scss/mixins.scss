@@ -2,8 +2,6 @@
     @media screen and (min-width: $width) { @content; }
 }
 
-// Media Queries Max Width
-
 @mixin max-w($width) {
     @media screen and (max-width: $width) { @content; }
 }
