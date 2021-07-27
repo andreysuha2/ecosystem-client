@@ -1,5 +1,5 @@
 <template>
     <header class="app-header">
-        header
+        <app-container>header <app-button icon="close"></app-button></app-container>
     </header>
 </template>
