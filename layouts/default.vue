@@ -1,5 +1,5 @@
 <template>
-    <div class="app">
+    <div class="app app__light">
         <div class="app--content">
             <app-header class="app--header"/>
             <div class="app--page">

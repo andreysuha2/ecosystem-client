@@ -1,6 +1,8 @@
 <template>
-    <footer class="app-footer flex justify-center">
-        <span class="app-footer--copy">&copy; {{ year }}</span>
+    <footer class="app-footer">
+        <app-container class="app-footer--container flex justify-center">
+            <span class="app-footer--copy">&copy; {{ year }}</span>
+        </app-container>
     </footer>
 </template>
 
